@@ -1,0 +1,9 @@
+entityName,fieldName,fieldLabel,type,length,precision,scale,nullable,temporalType,enumType,listDisplay,viewDisplay,editDisplay,dftValue,xx
+EntityOne,stringField,String Field,String,50,,,false,,,sort,show,edit,,xx
+EntityOne,bigDecimalField,Big Decimal Field,BigDecimal,,11,4,false,,,sort,show,edit,,xx
+EntityOne,booleanField,Boolean Field,Boolean,,,,false,,,sort,show,edit,,xx
+EntityOne,integerField,Integer Field,Integer,,,,false,,,sort,show,edit,,xx
+EntityOne,enumField,Enum Field,EnumStatus,,,,false,,STRING,sort,show,edit,,xx
+EntityOne,dateField,Date Field,Date,,,,false,DATE,,sort,show,edit,,xx
+EntityOne,timeField,Time Field,Date,,,,false,TIME,,sort,show,edit,,xx
+EntityOne,timestampField,Timestamp Field,Date,,,,false,TIMESTAMP,,sort,show,edit,,xx

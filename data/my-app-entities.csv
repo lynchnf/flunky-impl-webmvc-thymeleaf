@@ -1,0 +1,2 @@
+entityName,entityLabel,toString,mainField,defaultSort,defaultPage,xx
+EntityOne,Entity One,"""One: "" + stringField",stringField,ASC,10,xx
