@@ -1,6 +1,8 @@
 # Flunky Impl Web MVC Thymeleaf
 Flunky Implementation Using Spring Web MVC and Thymeleaf
 
+## Create enums and entities.
+
 ## Create home page and associated files.
 
 ## Generate templates for Spring-Boot project using Initializr.

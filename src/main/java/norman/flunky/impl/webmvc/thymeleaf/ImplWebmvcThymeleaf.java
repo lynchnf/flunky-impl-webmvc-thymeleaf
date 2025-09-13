@@ -19,12 +19,22 @@ public class ImplWebmvcThymeleaf implements ProjectType {
         // There is some weirdness with Maven not copying the .gitignore resource into the .jar file, so I have
         // side-stepped this issue by removing the leading dot in the template file's name.
         applicationGenerationProperties.add(new GenerationBean("gitignore", "/.gitignore", TemplateType.COPY));
-        applicationGenerationProperties.add(new GenerationBean("application.properties", "/src/main/resources/application.properties", COPY));
-        applicationGenerationProperties.add(new GenerationBean("Application-java.ftl", "/src/main/java/${basePackage?replace(\".\", \"/\")}/Application.java", GENERATE));
-        applicationGenerationProperties.add(new GenerationBean("common.js", "/src/main/resources/static/js/common.js", COPY));
-        applicationGenerationProperties.add(new GenerationBean("index-html.ftl", "/src/main/resources/templates/index.html", GENERATE));
-        applicationGenerationProperties.add(new GenerationBean("jquery-3.7.1.min.js", "/src/main/resources/static/js/jquery-3.7.1.min.js", COPY));
-        applicationGenerationProperties.add(new GenerationBean("main.css", "/src/main/resources/static/css/main.css", COPY));
+        applicationGenerationProperties.add(
+                new GenerationBean("application.properties", "/src/main/resources/application.properties", COPY));
+        applicationGenerationProperties.add(new GenerationBean("Application-java.ftl",
+                "/src/main/java/${basePackage?replace(\".\", \"/\")}/Application.java", GENERATE));
+        applicationGenerationProperties.add(
+                new GenerationBean("common.js", "/src/main/resources/static/js/common.js", COPY));
+        entityGenerationProperties.add(new GenerationBean("Entity-java.ftl",
+                "/src/main/java/${application.basePackage?replace(\".\", \"/\")}/domain/${entityName}.java", GENERATE));
+        enumGenerationProperties.add(new GenerationBean("Enum-java.ftl",
+                "/src/main/java/${application.basePackage?replace(\".\", \"/\")}/domain/${enumName}.java", GENERATE));
+        applicationGenerationProperties.add(
+                new GenerationBean("index-html.ftl", "/src/main/resources/templates/index.html", GENERATE));
+        applicationGenerationProperties.add(
+                new GenerationBean("jquery-3.7.1.min.js", "/src/main/resources/static/js/jquery-3.7.1.min.js", COPY));
+        applicationGenerationProperties.add(
+                new GenerationBean("main.css", "/src/main/resources/static/css/main.css", COPY));
         applicationGenerationProperties.add(new GenerationBean("pom-xml.ftl", "/pom.xml", GENERATE));
         applicationGenerationProperties.add(new GenerationBean("readme-md.ftl", "/README.md", GENERATE));
     }
